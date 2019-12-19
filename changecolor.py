@@ -1,11 +1,11 @@
 #!/usr/bin/python
 
-import Image
+
 import sys
 import argparse
-
-
-parser = argparse.ArgumentParser(description='Used to transpose the colors in an image.')
+from PIL import Image
+  
+parser = argparse.ArgumentParser(description='Used to transpose the colors in an Image.')
 parser.add_argument('filename', type=str, help='The file to be transposed')
 parser.add_argument('change', type=str, choices=["rbg", "grb", "gbr", "brg", "bgr"], help="the colors to be transposed")
 parser.add_argument("--outfile", type=str, required=False, help="The file to output to")
